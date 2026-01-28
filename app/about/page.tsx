@@ -7,7 +7,7 @@ export default function AboutPage() {
       <div className="text-center space-y-4">
         <h1 className="text-5xl font-extrabold">About Nordic Waves</h1>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Empowering youth through sports, community, and opportunity.
+          Empowering youth through sports, education, and health.
         </p>
       </div>
 
@@ -29,7 +29,7 @@ export default function AboutPage() {
           </p>
 
           <p className="text-gray-700 leading-relaxed text-lg">
-            With support from the community of Ísafjörður, Iceland, Nordic Waves is transforming
+            With support from the community of Westfjords, Iceland, Nordic Waves is transforming
             that power into action, connecting two cultures and proving how opportunity can travel
             across borders.
           </p>
@@ -50,15 +50,15 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
           <div>
-            <h3 className="text-4xl font-extrabold text-blue-600">150+</h3>
+            <h3 className="text-4xl font-extrabold text-[#FFDA03]">150+</h3>
             <p className="text-gray-700 mt-2">Youth Engaged</p>
           </div>
           <div>
-            <h3 className="text-4xl font-extrabold text-blue-600">3</h3>
+            <h3 className="text-4xl font-extrabold text-[#FFDA03]">3</h3>
             <p className="text-gray-700 mt-2">Local Initiatives Supported</p>
           </div>
           <div>
-            <h3 className="text-4xl font-extrabold text-blue-600">Senegal ↔ Iceland</h3>
+            <h3 className="text-4xl font-extrabold text-[#FFDA03]">Senegal ↔ Iceland</h3>
             <p className="text-gray-700 mt-2">Cultural Bridge Initiative</p>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function AboutPage() {
         <p className="text-gray-700 leading-relaxed text-lg">
           Nordic Waves was inspired by a personal journey. I grew up in Kebemer, Senegal, where
           following a dream was not simple. Many children face challenges that make ordinary life
-          difficult, access to school, healthcare, safe play, or simply the chance to imagine a
+          difficult access to school, healthcare, safe play, or simply the chance to imagine a
           future beyond their village.
         </p>
 
@@ -100,20 +100,34 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section className="space-y-8">
-        <h2 className="text-3xl font-bold text-center">Meet Our Team</h2>
+  <h2 className="text-3xl font-bold text-center">Meet Our Team</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="text-center space-y-3">
-              <div className="w-32 h-32 mx-auto rounded-full bg-gray-200"></div>
-              <h3 className="font-semibold text-xl">Team Member {i}</h3>
-              <p className="text-gray-600 text-sm">
-                Short bio goes here. Dedicated volunteer and community leader.
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    {/* Member 1 */}
+    <div className="text-center space-y-3">
+      <div className="w-32 h-32 mx-auto rounded-full bg-gray-200"></div>
+      <h3 className="font-semibold text-xl">Birta Lind Garöarsdóttir</h3>
+      <p className="text-gray-600 text-sm">Chairman</p>
+    </div>
+
+    {/* Member 2 */}
+    <div className="text-center space-y-3">
+      <div className="w-32 h-32 mx-auto rounded-full bg-gray-200"></div>
+      <h3 className="font-semibold text-xl">Tinna Hrund Hlynsdóttir</h3>
+      <p className="text-gray-600 text-sm">Board Member</p>
+    </div>
+
+    {/* Member 3 */}
+    <div className="text-center space-y-3">
+      <div className="w-32 h-32 mx-auto rounded-full bg-gray-200"></div>
+      <h3 className="font-semibold text-xl">Serigne Modou Fall</h3>
+      <p className="text-gray-600 text-sm">Executive Director</p>
+    </div>
+
+  </div>
+</section>
+
     </div>
   );
 }
