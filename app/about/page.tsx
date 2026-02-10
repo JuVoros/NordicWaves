@@ -1,133 +1,150 @@
-import Image from "next/image"
+'use client';
+
+import Image from "next/image";
+import { FadeUp } from "../components/motion-wrapper";
+import { TeamCard } from "../components/TeamCard";
+
+const team = [
+  {
+    name: "Birta Lind Garðarsdóttir",
+    role: "Chairman",
+    img: "/Photos/Birta Lind.jpg",
+    bio: `Birta Lind Garðarsdóttir works at the intersection of leadership, responsibility, and strong teamwork. She serves as Chair of Nordic Waves, where she demonstrates strategic vision and collaborative leadership. She is a qualified nurse and works at the Westfjords Healthcare Institution. In addition, she is Chair of the youth association Geisli and an active member of her local search and rescue team, fire brigade, and emergency response unit. Birta has a strong connection to football in her community, having played from a young age. She is passionate about children’s wellbeing, holistic health, and community-driven initiatives that promote positive and sustainable development.`
+  },
+  {
+    name: "Tinna Hrund Hlynsdóttir",
+    role: "Board Member",
+    img: "/Photos/Tinna Run.jpg",
+    bio: `Tinna Snorradóttir works at the intersection of community engagement, teamwork, and practical problem-solving. She is an industrial engineer and Head of Research and Development at Blámi, a board member of her local search and rescue unit, and has many years of experience practicing football. She is passionate about supporting community-led initiatives and working respectfully with local partners to create lasting impact`
+  },
+  {
+    name: "Serigne Modou Fall",
+    role: "Executive Director",
+    img: "/Photos/serigne.jpg",
+    bio: `Tinna hrund Hlynsdóttir : I serve on the board of the Children and Youth Council of Vestri Football Club and on the board of the Football Association of Iceland. I am deeply passionate about football and the power of sport to bring people together. The relationships and community built through the game are what inspire me the most.Football is more than a sport to me — it brings people together and creates lasting connections. The people I meet through football are what motivate and inspire me every day.`
+  }
+];
 
 export default function AboutPage() {
+
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 space-y-16">
-      {/* Page Header */}
-      <div className="text-center space-y-4">
-        <h1 className="text-5xl font-extrabold">About Nordic Waves</h1>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Empowering youth through sports, education, and health.
-        </p>
-      </div>
-
-      {/* Mission Section */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <h2 className="text-3xl font-bold">Our Mission</h2>
-          <p className="text-gray-700 leading-relaxed text-lg">
-            Nordic Waves Association exists to build a bridge between Iceland and Senegal through
-            sports, health education, and cultural exchange. Beginning our work in Kebemer, Senegal,
-            we aim to empower young people by giving them access to mentorship, life skills,
-            and opportunities they otherwise cannot reach on their own.
-          </p>
-
-          <p className="text-gray-700 leading-relaxed text-lg">
-            Sports, especially football, have the power to inspire change, build discipline,
-            and create healthier futures. Our programs focus on hygiene, nutrition, and mental
-            well being while encouraging leadership, confidence, and personal ambition.
-          </p>
-
-          <p className="text-gray-700 leading-relaxed text-lg">
-            With support from the community of Westfjords, Iceland, Nordic Waves is transforming
-            that power into action, connecting two cultures and proving how opportunity can travel
-            across borders.
-          </p>
-        </div>
-
-        <Image
-          src="/Photos/stockphoto5.jpg"
-          alt="Team huddle"
-          width={100}
-          height={100}
-          className="rounded-xl shadow-lg w-full h-80 object-cover"
-        />
-      </section>
-
-      {/* Impact Stats */}
-      <section className="bg-blue-50 py-12 rounded-2xl shadow-inner">
-        <h2 className="text-3xl font-bold text-center mb-10">Our Impact</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-          <div>
-            <h3 className="text-4xl font-extrabold text-[#FFDA03]">150+</h3>
-            <p className="text-gray-700 mt-2">Youth Engaged</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-extrabold text-[#FFDA03]">3</h3>
-            <p className="text-gray-700 mt-2">Local Initiatives Supported</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-extrabold text-[#FFDA03]">Senegal ↔ Iceland</h3>
-            <p className="text-gray-700 mt-2">Cultural Bridge Initiative</p>
-          </div>
+    <>
+      {/* ABOUT HERO */}
+      <section className="bg-[#F6FAFC] py-20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <FadeUp>
+            <span className="text-sm font-semibold text-[#FFDA03] uppercase">
+              About Us
+            </span>
+            <h1 className="mt-4 text-5xl font-extrabold">
+              The Story Behind Nordic Waves
+            </h1>
+            <p className="mt-6 text-gray-600 text-lg">
+              Connecting youth, cultures, and opportunity through the power of sport.
+            </p>
+          </FadeUp>
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="space-y-6">
-        <h2 className="text-3xl font-bold text-center">Our Story</h2>
+      {/* MISSION */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
 
-        <p className="text-gray-700 leading-relaxed text-lg">
-          Nordic Waves was inspired by a personal journey. I grew up in Kebemer, Senegal, where
-          following a dream was not simple. Many children face challenges that make ordinary life
-          difficult access to school, healthcare, safe play, or simply the chance to imagine a
-          future beyond their village.
-        </p>
+          <FadeUp>
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold">Our Mission</h2>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Nordic Waves Association exists to build a bridge between Iceland and
+                Senegal through sports, health education, and cultural exchange.
+              </p>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Sports have the power to inspire change, build discipline, and create
+                healthier futures. Our programs focus on leadership, hygiene, nutrition,
+                and mental well-being.
+              </p>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                With support from the Westfjords community, Nordic Waves connects cultures
+                and proves how opportunity can travel across borders.
+              </p>
+            </div>
+          </FadeUp>
 
-        <p className="text-gray-700 leading-relaxed text-lg">
-          With determination and resilience, I pursued football and eventually found my way to
-          Iceland. This country welcomed me, helped me integrate, and gave me a sense of belonging.
-          That experience showed me how powerful opportunity can be, and how many young people
-          back home never get that chance.
-        </p>
+          <FadeUp delay={0.15}>
+            <div className="rounded-[2rem] overflow-hidden shadow-lg">
+              <Image
+                src="/Photos/ProkebsCamp-5.jpg"
+                alt="Team huddle"
+                width={600}
+                height={400}
+                className="object-cover"
+              />
+            </div>
+          </FadeUp>
 
-        <p className="text-gray-700 leading-relaxed text-lg">
-          Along that journey, I discovered the work of Amadou Gallo Fall, who created NBA Africa in
-          1998. His legacy proved how sports can transform lives and open international pathways.
-          While his mission began with basketball, my dream is to expand that vision across multiple
-          sports, starting in rural communities like Kebemer, places full of talent waiting to be
-          seen.
-        </p>
-
-        <p className="text-gray-700 leading-relaxed text-lg">
-          Today, the community of Ísafjörður has joined this mission with enthusiasm. Volunteers
-          and neighbors have become partners in helping build Nordic Waves Association, connecting
-          Africa and Iceland through support, shared values, and the belief that investing in
-          young people can change worlds.
-        </p>
+        </div>
       </section>
 
-      {/* Team Section */}
-      <section className="space-y-8">
+      {/* IMPACT */}
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <FadeUp>
+            <h2 className="text-4xl font-bold">Our Impact</h2>
+          </FadeUp>
+
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              { value: "150+", label: "Youth Engaged" },
+              { value: "3", label: "Local Initiatives Supported" },
+              { value: "Senegal ↔ Iceland", label: "Cultural Bridge" }
+            ].map((s, i) => (
+              <FadeUp key={i} delay={i * 0.1}>
+                <div>
+                  <div className="text-4xl font-extrabold text-[#FFDA03]">
+                    {s.value}
+                  </div>
+                  <p className="mt-2 text-gray-600">{s.label}</p>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STORY */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-6 space-y-6">
+          <FadeUp>
+            <h2 className="text-4xl font-bold text-center">Our Story</h2>
+          </FadeUp>
+
+          <FadeUp>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Nordic Waves was inspired by a personal journey that began in Kebemer,
+              Senegal. Many children face barriers to education, healthcare, and safe
+              spaces to grow.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Through sport, opportunity opened doors that once felt unreachable. That
+              experience shaped the belief that access can change lives.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Today, Nordic Waves exists to pass that opportunity forward—connecting
+              communities and empowering the next generation.
+            </p>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* TEAM – INTERACTIVE */}
+      <section className="space-y-8 pb-28">
   <h2 className="text-3xl font-bold text-center">Meet Our Team</h2>
 
   <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-    {/* Member 1 */}
-    <div className="text-center space-y-3">
-      <div className="w-32 h-32 mx-auto rounded-full bg-gray-200"></div>
-      <h3 className="font-semibold text-xl">Birta Lind Garöarsdóttir</h3>
-      <p className="text-gray-600 text-sm">Chairman</p>
-    </div>
-
-    {/* Member 2 */}
-    <div className="text-center space-y-3">
-      <div className="w-32 h-32 mx-auto rounded-full bg-gray-200"></div>
-      <h3 className="font-semibold text-xl">Tinna Hrund Hlynsdóttir</h3>
-      <p className="text-gray-600 text-sm">Board Member</p>
-    </div>
-
-    {/* Member 3 */}
-    <div className="text-center space-y-3">
-      <div className="w-32 h-32 mx-auto rounded-full bg-gray-200"></div>
-      <h3 className="font-semibold text-xl">Serigne Modou Fall</h3>
-      <p className="text-gray-600 text-sm">Executive Director</p>
-    </div>
-
+    {team.map((member) => (
+      <TeamCard key={member.name} member={member} />
+    ))}
   </div>
 </section>
-
-    </div>
+    </>
   );
 }
